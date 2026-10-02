@@ -1,21 +1,25 @@
 # Customer Management CRUD Application
 
-A simple Customer Management CRUD application built with Laravel and MySQL. The application allows users to create, view, update, and delete customer records through a clean and responsive web interface.
+A simple Customer Management CRUD web application built using Laravel and MySQL. This project demonstrates the implementation of Create, Read, Update, and Delete operations with server-side form validation and a responsive user interface.
 
 ## Features
 
-* Create new customer records
+* Add new customer records
 * View all customers
 * View individual customer details
-* Update customer information
+* Edit customer information
 * Delete customer records
 * Server-side form validation
+* Required field validation
 * Email format validation
 * Duplicate email prevention
-* Responsive Bootstrap user interface
+* Responsive user interface
 * MySQL database integration
+* Bootstrap 5 user interface
 
-## Customer Fields
+## Customer Information
+
+The application manages the following customer details:
 
 * Name
 * Email
@@ -36,13 +40,13 @@ A simple Customer Management CRUD application built with Laravel and MySQL. The 
 
 ## Laravel Concepts Used
 
-* MVC architecture
+* MVC Architecture
 * Eloquent ORM
 * Resource Controllers
 * Database Migrations
 * Blade Templates
 * Route Model Binding
-* Form Validation
+* Server-Side Form Validation
 * Mass Assignment
 * Named Routes
 * CRUD Operations
@@ -50,16 +54,18 @@ A simple Customer Management CRUD application built with Laravel and MySQL. The 
 ## Project Structure
 
 ```text
-customer-crud/
+customer-crud-submission/
 ├── app/
 │   ├── Http/
 │   │   └── Controllers/
 │   │       └── CustomerController.php
 │   └── Models/
 │       └── Customer.php
+│
 ├── database/
 │   └── migrations/
-│       └── create_customers_table.php
+│       └── 2026_10_01_193224_create_customers_table.php
+│
 ├── resources/
 │   └── views/
 │       └── customers/
@@ -67,21 +73,25 @@ customer-crud/
 │           ├── create.blade.php
 │           ├── edit.blade.php
 │           └── show.blade.php
+│
 ├── routes/
 │   └── web.php
+│
 ├── .env.example
+├── .gitignore
 ├── artisan
 ├── composer.json
+├── composer.lock
 └── README.md
 ```
 
-## Installation & Setup
+## Installation and Setup
 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/ruvandipriyasha/customer-crud.git
-cd customer-crud
+git clone https://github.com/ruvandipriyasha/customer-crud-submission.git
+cd customer-crud-submission
 ```
 
 ### 2. Install PHP dependencies
@@ -92,11 +102,7 @@ composer install
 
 ### 3. Create the environment file
 
-```bash
-cp .env.example .env
-```
-
-On Windows PowerShell, you can also use:
+On Windows PowerShell:
 
 ```powershell
 Copy-Item .env.example .env
@@ -116,9 +122,9 @@ Create a MySQL database named:
 customer_crud
 ```
 
-Then update the database settings in `.env`:
+Then configure the `.env` file:
 
-```env
+```text
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
@@ -149,27 +155,46 @@ http://127.0.0.1:8000
 
 The application includes server-side validation for customer information.
 
-Examples:
-
 * Name is required
+* Name must be a string
 * Email is required
 * Email must have a valid format
 * Email must be unique
 * Phone is optional
 * Address is optional
 
+Validation errors are displayed on the customer forms when invalid data is submitted.
+
 ## CRUD Operations
 
-| Operation | Description                               |
-| --------- | ----------------------------------------- |
-| Create    | Add a new customer                        |
-| Read      | View customer list and individual details |
-| Update    | Edit existing customer information        |
-| Delete    | Remove a customer record                  |
+| Operation  | Description                                            |
+| ---------- | ------------------------------------------------------ |
+| **Create** | Add a new customer                                     |
+| **Read**   | View the customer list and individual customer details |
+| **Update** | Edit existing customer information                     |
+| **Delete** | Remove a customer record                               |
+
+## Application Flow
+
+```text
+Customer List
+      │
+      ├── Add Customer
+      │       └── Create Customer
+      │
+      ├── View
+      │       └── Customer Details
+      │
+      ├── Edit
+      │       └── Update Customer
+      │
+      └── Delete
+              └── Remove Customer
+```
 
 ## Project Purpose
 
-This project was developed as a practical Laravel CRUD application to demonstrate fundamental web application development skills, including MVC architecture, database integration, Eloquent ORM, routing, controllers, Blade views, and server-side validation.
+This project was developed as a practical Laravel CRUD application to demonstrate fundamental web application development skills, including MVC architecture, routing, controllers, Blade templates, database migrations, Eloquent ORM, MySQL database integration, and server-side validation.
 
 ## Author
 
@@ -177,5 +202,8 @@ This project was developed as a practical Laravel CRUD application to demonstrat
 
 HNDIT Undergraduate | Web Developer Intern
 
-GitHub: https://github.com/ruvandipriyasha
+GitHub:
+https://github.com/ruvandipriyasha
 
+Project Repository:
+https://github.com/ruvandipriyasha/customer-crud-submission
