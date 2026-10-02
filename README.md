@@ -85,7 +85,7 @@ customer-crud-submission/
 └── README.md
 ```
 
-## Installation and Setup
+## Installation & Setup
 
 ### 1. Clone the repository
 
@@ -122,9 +122,9 @@ Create a MySQL database named:
 customer_crud
 ```
 
-Then configure the `.env` file:
+Then update the database settings in `.env`:
 
-```text
+```env
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
