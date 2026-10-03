@@ -52,6 +52,7 @@
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Phone</th>
+                                <th>Date of Birth</th>
                                 <th>Address</th>
                                 <th class="text-center">Actions</th>
                             </tr>
@@ -72,6 +73,10 @@
 
                                     <td>
                                         {{ $customer->phone ?? 'N/A' }}
+                                    </td>
+
+                                    <td>
+                                        {{ $customer->date_of_birth ? \Carbon\Carbon::parse($customer->date_of_birth)->format('d M Y') : 'N/A' }}
                                     </td>
 
                                     <td>

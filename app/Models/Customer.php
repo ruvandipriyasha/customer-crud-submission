@@ -11,5 +11,6 @@ class Customer extends Model
         'email',
         'phone',
         'address',
+        'date_of_birth',
     ];
 }

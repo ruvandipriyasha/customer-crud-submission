@@ -35,6 +35,7 @@ class CustomerController extends Controller
             'email' => 'required|email|unique:customers,email',
             'phone' => 'nullable|string|max:20',
             'address' => 'nullable|string|max:1000',
+            'date_of_birth' => 'nullable|date|before_or_equal:today',
         ]);
 
         Customer::create($validated);
@@ -70,6 +71,7 @@ class CustomerController extends Controller
             'email' => 'required|email|unique:customers,email,' . $customer->id,
             'phone' => 'nullable|string|max:20',
             'address' => 'nullable|string|max:1000',
+            'date_of_birth' => 'nullable|date|before_or_equal:today',
         ]);
 
         $customer->update($validated);

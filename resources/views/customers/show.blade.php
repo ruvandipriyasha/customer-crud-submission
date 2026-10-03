@@ -47,6 +47,13 @@
                     </div>
 
                     <div class="mb-4">
+                        <label class="text-muted small">Date of Birth</label>
+                        <h5>
+                            {{ $customer->date_of_birth ? \Carbon\Carbon::parse($customer->date_of_birth)->format('d M Y') : 'N/A' }}
+                        </h5>
+                    </div>
+
+                    <div class="mb-4">
                         <label class="text-muted small">Address</label>
                         <h5>{{ $customer->address ?? 'N/A' }}</h5>
                     </div>

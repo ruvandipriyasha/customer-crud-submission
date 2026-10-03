@@ -86,6 +86,20 @@
                             >
                         </div>
 
+                        <div class="mb-3">
+                            <label for="date_of_birth" class="form-label">
+                                Date of Birth
+                            </label>
+
+                            <input
+                                type="date"
+                                name="date_of_birth"
+                                id="date_of_birth"
+                                class="form-control"
+                                value="{{ old('date_of_birth') }}"
+                            >
+                        </div>
+
                         <div class="mb-4">
                             <label for="address" class="form-label">
                                 Address
