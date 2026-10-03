@@ -13,6 +13,7 @@ A simple Customer Management CRUD web application built using Laravel and MySQL.
 * Required field validation
 * Email format validation
 * Duplicate email prevention
+* Date of birth validation
 * Responsive user interface
 * MySQL database integration
 * Bootstrap 5 user interface
@@ -65,7 +66,8 @@ customer-crud-submission/
 │
 ├── database/
 │   └── migrations/
-│       └── 2026_10_01_193224_create_customers_table.php
+│       ├── 2026_10_01_193224_create_customers_table.php
+│       └── 2026_10_03_144740_add_date_of_birth_to_customers_table.php
 │
 ├── resources/
 │   └── views/
@@ -162,18 +164,21 @@ The application includes server-side validation for customer information.
 * Email must have a valid format
 * Email must be unique
 * Phone is optional
+* Date of Birth is optional
+* Date of Birth must be a valid date
+* Date of Birth cannot be a future date
 * Address is optional
 
 Validation errors are displayed on the customer forms when invalid data is submitted.
 
 ## CRUD Operations
 
-| Operation  | Description                                            |
-| ---------- | ------------------------------------------------------ |
-| **Create** | Add a new customer                                     |
-| **Read**   | View the customer list and individual customer details |
-| **Update** | Edit existing customer information                     |
-| **Delete** | Remove a customer record                               |
+| **Operation** | **Description**                                        |
+| ------------- | ------------------------------------------------------ |
+| **Create**    | Add a new customer                                     |
+| **Read**      | View the customer list and individual customer details |
+| **Update**    | Edit existing customer information                     |
+| **Delete**    | Remove a customer record                               |
 
 ## Application Flow
 
@@ -203,8 +208,7 @@ This project was developed as a practical Laravel CRUD application to demonstrat
 
 HNDIT Undergraduate | Web Developer Intern
 
-GitHub:
-https://github.com/ruvandipriyasha
+GitHub: https://github.com/ruvandipriyasha
 
-Project Repository:
-https://github.com/ruvandipriyasha/customer-crud-submission
+Project Repository: https://github.com/ruvandipriyasha/customer-crud-submission
+
