@@ -24,6 +24,7 @@ The application manages the following customer details:
 * Name
 * Email
 * Phone
+* Date of Birth
 * Address
 
 ## Technologies Used
